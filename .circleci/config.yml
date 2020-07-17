@@ -1,0 +1,26 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  build-and-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - add_ssh_keys: 
+          fingerprints:
+            - "52:a2:f5:a3:dd:8d:2a:ec:7b:86:bf:c3:b1:2d:81:d4"
+      - node/with-cache:
+          steps:
+            - run: git config user.email "$GIT_USER_EMAIL"
+            - run: git config user.name "$GIT_USER_NAME"
+            - run: npm install 
+            - run: npm run deploy
+workflows:
+    build-and-test:
+      jobs:
+        - build-and-test:
+            filters:
+              branches: 
+                only:
+                  - source
