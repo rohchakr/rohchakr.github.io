@@ -34,7 +34,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build && gh-pages --user.name rohchakr --user.email \"rohchakr@gmail.com\" -d public -b master --depth=0 --dotfiles=true"    
+    "deploy": "gh-pages --user=\"rohchakr <rohchakr@gmail.com>\" -d public -b master --depth=0 --dotfiles=true",  
+    "ghexp": "gh-pages --help"
   },
   "repository": {
     "type": "git",
