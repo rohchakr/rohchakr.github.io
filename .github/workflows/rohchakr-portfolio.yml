@@ -1,13 +1,20 @@
-name: Push Workflow
+name: Full Build and Deploy  ## Workflow
 
-on: [push]
+on:
+  push:
+    branches:
+      - source
+
+defaults: 
+  run:
+    shell: bash
 
 jobs:
-  push-job1:
+  main-job:
 
-    name: Push Workflow - Job 1
+    name: Deploy Job
     runs-on: ubuntu-latest
     
     steps:
-      - name: Print Hello World
-        run: echo 'Hello World!'
+      - name: Install, Build and Deploy
+        run: npm install && npm run deploy
