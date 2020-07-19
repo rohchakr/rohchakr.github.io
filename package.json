@@ -34,7 +34,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build && cp -r .circleci public\/ && gh-pages -d public -b master --depth=0 --dotfiles=true"    
+    "deploy": "gatsby build && gh-pages -d public -b master --depth=0 --dotfiles=true"    
   },
   "repository": {
     "type": "git",
