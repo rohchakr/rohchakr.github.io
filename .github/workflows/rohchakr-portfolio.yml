@@ -21,4 +21,5 @@ jobs:
       - name: Deploy steps
         run: |
           npm install
+          npm run build
           NODE_DEBUG=gh-pages npm run deploy
