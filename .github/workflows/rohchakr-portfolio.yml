@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v1
       - name: Configure Github user
         env:
-          USER_NAME: ${GITHUB_ACTOR}
+          USER_NAME: demo
           USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
         run: |
           git config user.email "$USER_EMAIL"
