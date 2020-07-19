@@ -18,12 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - name: Configure Github user
-        env:
-          USER_NAME: demo
-          USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
+      - name: Deploy steps
         run: |
-          git config user.email "$USER_EMAIL"
-          git config user.name "$USER_NAME"
           npm install
           NODE_DEBUG=gh-pages npm run deploy
