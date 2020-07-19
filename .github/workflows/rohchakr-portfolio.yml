@@ -20,8 +20,8 @@ jobs:
       - uses: actions/setup-node@v1
       - name: Configure Github user
         run: |
-          git config user.email "$GIT_USER_EMAIL"
-          git config user.name "$GIT_USER_NAME"
+          git config user.email ${{ secrets.GIT_USER_EMAIL }}
+          git config user.name ${{ secrets.GIT_USER_NAME }}
       - name: Install, Build and Deploy
         run: |
           npm install
