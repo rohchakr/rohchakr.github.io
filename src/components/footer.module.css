@@ -18,11 +18,11 @@
     list-style-type: none;
     margin: 0;
 }
-.footer a {
+.footer ul a {
     display: flex;
     align-items: center;
 }
-.footer a > p {
+.footer ul a > p {
     margin: 0 5px;
 }
 .footer a:link {
