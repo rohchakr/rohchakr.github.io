@@ -18,9 +18,9 @@ const CopyRightArea = () => (
     <h3>rohchakr.github.io</h3>
     <p>
       Copyright © Rohit Chakraborty {new Date().getFullYear()}
-      {` `}
+      <br />
       Built with <a href="https://www.gatsbyjs.org" target="_blank">Gatsby</a>
-      {` `}
+      <br />
       Hosted on <a href="https://github.com/rohchakr/rohchakr.github.io" target="_blank">GitHub</a>
     </p>
   </section>
