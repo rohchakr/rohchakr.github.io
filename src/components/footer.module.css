@@ -1,43 +1,43 @@
-footer {
+.footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     padding: 20px;
     border-top: 1px solid black;
 }
-section {
+.footer section {
     margin: 0 10px;
 }
-h3 { 
+.footer h3 { 
     margin: 0;
 }
-ul {
+.footer ul {
     margin: 0;
 }
-li {
+.footer li {
     list-style-type: none;
     margin: 0;
 }
-a {
+.footer a {
     display: flex;
     align-items: center;
 }
-a > p {
+.footer a > p {
     margin: 0 5px;
 }
-a:link {
+.footer a:link {
     text-decoration: none;
     color: inherit;
 }
-a:visited {
+.footer a:visited {
     text-decoration: none;
     color: inherit;
 }
-a:hover {
+.footer a:hover {
     text-decoration: none;
     color: inherit;
 }
-a:active {
+.footer a:active {
     text-decoration: none;
     color: inherit;
 }

@@ -2,7 +2,7 @@ import React from "react"
 import { VscGithub } from "react-icons/vsc"
 import { FaTwitter, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa"
 import * as Contacts from "../constants/contact-url"
-import "./footer.css"
+import footerStyles from "./footer.module.css"
 
 const Item = ({ icon, text, url }) => (
   <li>
@@ -38,7 +38,7 @@ const ContactArea = () => (
 )
 
 const Footer = () => (
-  <footer>
+  <footer className={footerStyles.footer}>
     <CopyRightArea />
     <ContactArea />
   </footer>
