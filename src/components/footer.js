@@ -2,25 +2,30 @@ import React from "react"
 import { VscGithub } from "react-icons/vsc"
 import { FaTwitter, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa"
 import * as Contacts from "../constants/contact-url"
+import "./footer.css"
 
 const Item = ({ icon, text, url }) => (
   <li>
-    <a href={url}>
-      {icon}{text}
+    <a href={url} target="_blank">
+      {icon}
+      <p>{text}</p>
     </a>
   </li>
 )
 
 const CopyRightArea = () => (
-  <>
-    © {new Date().getFullYear()}, Built with
+  <section>
+    <h3>rohchakr.github.io</h3>
+    <p>
+      © {new Date().getFullYear()}, Built with
     {` `}
-    <a href="https://www.gatsbyjs.org">Gatsby</a>
-  </>
+      <a href="https://www.gatsbyjs.org" target="_blank">Gatsby</a>
+    </p>
+  </section>
 )
 
 const ContactArea = () => (
-  <>
+  <section>
     <h3>Connect</h3>
     <ul>
       <Item icon={<VscGithub />} text='GitHub' url={Contacts.GITHUB_URL} />
@@ -29,7 +34,7 @@ const ContactArea = () => (
       <Item icon={<FaTwitter />} text='Twitter' url={Contacts.TWITTER_URL} />
       <Item icon={<FaFacebook />} text='Facebook' url={Contacts.FACEBOOK_URL} />
     </ul>
-  </>
+  </section>
 )
 
 const Footer = () => (

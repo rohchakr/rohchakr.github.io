@@ -1,0 +1,43 @@
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 20px;
+    border-top: 1px solid black;
+}
+section {
+    margin: 0 10px;
+}
+h3 { 
+    margin: 0;
+}
+ul {
+    margin: 0;
+}
+li {
+    list-style-type: none;
+    margin: 0;
+}
+a {
+    display: flex;
+    align-items: center;
+}
+a > p {
+    margin: 0 5px;
+}
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
