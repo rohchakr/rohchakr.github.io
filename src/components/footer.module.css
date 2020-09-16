@@ -5,8 +5,8 @@
     padding: 20px;
     border-top: 1px solid black;
 }
-.footer section {
-    margin: 0 10px;
+.footer section, .footer nav {
+    margin: 1.45rem;
 }
 .footer h3 { 
     margin: 0;
@@ -18,11 +18,14 @@
     list-style-type: none;
     margin: 0;
 }
+.footer section > p {
+    margin: 0;
+}
 .footer ul a {
     display: flex;
     align-items: center;
 }
-.footer ul a > p {
+.contactArea ul a > p {
     margin: 0 5px;
 }
 .footer a:link {
@@ -40,4 +43,7 @@
 .footer a:active {
     text-decoration: none;
     color: inherit;
+}
+.copyRightSection a {
+    background: lightblue;
 }

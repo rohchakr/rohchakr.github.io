@@ -1,0 +1,31 @@
+.header {
+    margin-bottom: 1.45rem;
+    border-bottom: 1px solid black;
+}
+.navArea > ul{
+    display: flex;
+    flex-flow: row wrap;
+}
+.header ul {
+    margin: 0;
+}
+.header li {
+    list-style-type: none;
+    margin: 0;
+}
+.header a:link {
+    text-decoration: none;
+    color: inherit;
+}
+.header a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+.header a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+.header a:active {
+    text-decoration: none;
+    color: inherit;
+}
