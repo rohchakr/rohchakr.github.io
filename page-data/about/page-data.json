@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-about-js","path":"/about/","result":{"pageContext":{}}}
+{"componentChunkName":"component---src-templates-about-template-js","path":"/about","result":{"data":{"markdownRemark":{"html":"<h2>About page</h2>\n<p>Namaste!</p>","frontmatter":{"date":"September 19, 2020","slug":"/about","title":"About"}}},"pageContext":{"slug":"/about"}}}
