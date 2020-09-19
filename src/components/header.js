@@ -3,26 +3,26 @@ import PropTypes from "prop-types"
 import React from "react"
 import headerStyles from "./header.module.css"
 
-const NavItem = ({ text, url }) => (
-  <li>
+const NavItem = ({ text, url, focus }) => (
+  <li className={focus?headerStyles.navItemFocus:headerStyles.navItem}>
     <a href={url}>
       <p>{text}</p>
     </a>
   </li>
 )
 
-const NavigationArea = () => (
+const NavigationArea = ({ location }) => (
   <nav className={headerStyles.navArea}>
     <ul>
-      <NavItem text='About' url='/' />
-      <NavItem text='Blog' url='/' />
-      <NavItem text='Portfolio' url='/' />
-      <NavItem text='Miscellaneous' url='/' />
+      <NavItem text='About' url='/about' focus={location === 'about'}/>
+      <NavItem text='Blog' url='/blog' focus={location === 'blog'}/>
+      <NavItem text='Portfolio' url='/portfolio' focus={location === 'portfolio'}/>
+      <NavItem text='Miscellaneous' url='/misc' focus={location === 'misc'}/>
     </ul>
   </nav>
 )
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, navLocation }) => (
   <header className={headerStyles.header}>
     <div
       style={{
@@ -37,16 +37,26 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
-    <NavigationArea />
+    <NavigationArea location={navLocation}/>
   </header>
 )
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  navLocation: PropTypes.string,
 }
 
 Header.defaultProps = {
   siteTitle: ``,
+  navLocation: ``,
+}
+
+NavItem.propTypes = {
+  focus: PropTypes.bool,
+}
+
+NavItem.defaultProps = {
+  focus: false,
 }
 
 export default Header

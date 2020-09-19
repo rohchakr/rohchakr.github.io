@@ -40,11 +40,11 @@ const NavigationArea = () => (
   <nav>
     <h3>Explore</h3>
     <ul>
-      <NavItem text='About' url='/' />
-      <NavItem text='Blog' url='/' />
-      <NavItem text='Portfolio' url='/' />
-      <NavItem text='Miscellaneous' url='/' />
-      <NavItem text='Legal' url='/' />
+      <NavItem text='About' url='/about' />
+      <NavItem text='Blog' url='/blog' />
+      <NavItem text='Portfolio' url='/portfolio' />
+      <NavItem text='Miscellaneous' url='/misc' />
+      <NavItem text='Legal' url='/legal' />
     </ul>
   </nav>
 )

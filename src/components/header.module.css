@@ -7,11 +7,15 @@
     flex-flow: row wrap;
 }
 .header ul {
+    margin: 0.2em;
+}
+.navArea li {
+    list-style-type: none;
+    padding: 0 0.3em;
     margin: 0;
 }
-.header li {
-    list-style-type: none;
-    margin: 0;
+.navArea li:hover, .navArea li:active {
+    background: lightblue;
 }
 .header a:link {
     text-decoration: none;
@@ -28,4 +32,10 @@
 .header a:active {
     text-decoration: none;
     color: inherit;
+}
+.navItemFocus {
+    border-bottom: 1px solid blue;
+}
+.navItem {
+    border-bottom: none;
 }
