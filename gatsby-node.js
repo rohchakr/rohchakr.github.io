@@ -9,6 +9,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions
   
     const aboutTemplate = require.resolve(`./src/templates/aboutTemplate.js`)
+    const blogTemplate = require.resolve(`./src/templates/blogTemplate.js`)
   
     const result = await graphql(`
       {
@@ -34,13 +35,23 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.slug,
-        component: aboutTemplate,
-        context: {
-          // additional data can be passed via context
-          slug: node.frontmatter.slug,
-        },
-      })
+        let component = aboutTemplate
+
+        switch (node.frontmatter.slug.split('/')[1]) {
+            case 'about':
+                component = aboutTemplate
+                break
+            case 'blog':
+                component = blogTemplate
+        }
+
+        createPage({
+            path: node.frontmatter.slug,
+            component: component,
+            context: {
+                // additional data can be passed via context
+                slug: node.frontmatter.slug,
+            },
+        })
     })
   }
