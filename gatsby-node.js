@@ -19,7 +19,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         ) {
           edges {
             node {
-              frontmatter {
+              fields {
                 slug
               }
             }
@@ -37,7 +37,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         let component = aboutTemplate
 
-        switch (node.frontmatter.slug.split('/')[1]) {
+        switch (node.fields.slug.split('/')[1]) {
             case 'about':
                 component = aboutTemplate
                 break
@@ -46,12 +46,35 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
 
         createPage({
-            path: node.frontmatter.slug,
+            path: node.fields.slug,
             component: component,
             context: {
                 // additional data can be passed via context
-                slug: node.frontmatter.slug,
+                slug: node.fields.slug,
             },
         })
     })
   }
+
+
+// Create custom fields
+// https://www.gatsbyjs.com/docs/creating-slugs-for-pages/
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createSlug(createFilePath({ node, getNode, basePath: `docs` }))
+
+    createNodeField({
+        node,
+        name: `slug`,
+        value: slug,
+    })
+  }
+}
+
+createSlug = (filePath) => {
+    // FIXME: Use regex to hide long paths for blogs
+    return filePath
+}
