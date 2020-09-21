@@ -5,9 +5,9 @@ import headerStyles from "./header.module.css"
 
 const NavItem = ({ text, url, focus }) => (
   <li className={focus?headerStyles.navItemFocus:headerStyles.navItem}>
-    <a href={url}>
+    <Link to={url}>
       <p>{text}</p>
-    </a>
+    </Link>
   </li>
 )
 
