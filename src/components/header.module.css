@@ -1,6 +1,6 @@
 .header {
     margin-bottom: 1.45rem;
-    border-bottom: 1px solid black;
+    box-shadow: 0 0.5em 1.5em -0.5em lightgrey; 
 }
 .navArea > ul{
     display: flex;
@@ -11,8 +11,8 @@
 }
 .navArea li {
     list-style-type: none;
-    padding: 0 0.3em;
-    margin: 0;
+    padding: 0.2em 0.4em;
+    margin: 0 1px;
 }
 .navArea li:hover, .navArea li:active {
     background: lightblue;
@@ -34,8 +34,8 @@
     color: inherit;
 }
 .navItemFocus {
-    border-bottom: 1px solid blue;
+    background-color: rgb(230, 228, 228);
 }
 .navItem {
-    border-bottom: none;
+    /* background-color: rgb(250, 230, 200); */
 }
