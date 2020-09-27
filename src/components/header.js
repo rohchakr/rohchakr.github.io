@@ -14,6 +14,7 @@ const NavItem = ({ text, url, focus }) => (
 const NavigationArea = ({ location }) => (
   <nav className={headerStyles.navArea}>
     <ul>
+      <NavItem text='Home' url='/' focus={location === 'home'}/>
       <NavItem text='About' url='/about' focus={location === 'about'}/>
       <NavItem text='Blog' url='/blog' focus={location === 'blog'}/>
       <NavItem text='Portfolio' url='/portfolio' focus={location === 'portfolio'}/>

@@ -3,6 +3,7 @@
     /* box-shadow: 0 0.5em 1.5em -0.5em #502505;  */
     background-color: rgb(50, 25, 5);
     color: rgb(245, 235, 200);
+    opacity: 0.9;
 }
 .navArea > ul{
     display: flex;
@@ -10,11 +11,12 @@
 }
 .navArea li {
     list-style-type: none;
-    padding: 0.2em 0.4em;
-    margin: 0 1px;
+    padding: 0.4em 1em;
+    margin: 0.5em 1px 0 1px;
+    cursor: pointer;
 }
 .navArea li:hover, .navArea li:active {
-    background: lightblue;
+    text-decoration: underline;
 }
 .header a:link {
     text-decoration: none;
@@ -37,5 +39,9 @@
     color: rgb(50, 25, 5);
 }
 .navItem {
-    /* background-color: rgb(250, 230, 200); */
+    background-color: rgb(100, 60, 40);
+}
+.navItem:hover, .navItem:active {
+    color: white;
+    background-color: rgb(90, 45, 10);
 }
