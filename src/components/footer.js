@@ -19,7 +19,7 @@ const CopyRightArea = () => (
   <section className={footerStyles.copyRightSection}>
     <h3>rohchakr.github.io</h3>
     <p>
-      Copyright © {new Date().getFullYear()}, Rohit Chakraborty
+      © {new Date().getFullYear()}, Rohit Chakraborty
       <br />
       Made with ❤️ using <a href="https://www.gatsbyjs.org" target="_blank">Gatsby <MdOpenInNew /></a>
       <br />

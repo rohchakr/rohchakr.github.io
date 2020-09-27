@@ -26,8 +26,10 @@ const Layout = ({ children, navLocation }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} navLocation={navLocation}/>
-      <div
+      <div id="headerWrapper">
+        <Header siteTitle={data.site.siteMetadata.title} navLocation={navLocation}/>
+      </div>
+      <div id="mainWrapper"
         style={{
           margin: `0 auto`,
           maxWidth: 960,
@@ -36,7 +38,9 @@ const Layout = ({ children, navLocation }) => {
       >
         <main>{children}</main>
       </div>
-      <Footer />
+      <div id="footerWrapper">
+        <Footer />
+      </div>
     </>
   )
 }

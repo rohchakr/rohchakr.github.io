@@ -24,7 +24,7 @@ const NavigationArea = ({ location }) => (
 
 const Header = ({ siteTitle, navLocation }) => (
   <header className={headerStyles.header}>
-    <div
+    {/* <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
@@ -36,7 +36,7 @@ const Header = ({ siteTitle, navLocation }) => (
           {siteTitle}
         </Link>
       </h1>
-    </div>
+    </div> */}
     <NavigationArea location={navLocation}/>
   </header>
 )

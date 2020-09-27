@@ -3,14 +3,16 @@
     flex-flow: row wrap;
     justify-content: space-around;
     padding: 20px;
-    background-color: rgb(50, 25, 5);
-    color: white;
+    color: rgb(50, 25, 5);
+    background-color: rgb(245, 235, 200);
 }
 .footer section, .footer nav {
-    margin: 1.45rem;
+    margin: 1.2rem;
 }
 .footer h3 { 
     margin: 0;
+    margin-bottom: 0.5rem;
+    color: rgb(120, 70, 40);
 }
 .footer ul {
     margin: 0;
@@ -46,5 +48,5 @@
     color: inherit;
 }
 .copyRightSection a {
-    background: lightblue;
+    font-weight: bold;
 }
