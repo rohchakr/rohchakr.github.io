@@ -1,6 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
 const PostLink = ({ post }) => (
     <div>
       <Link to={post.fields.slug}>
@@ -15,10 +18,15 @@ const BlogIndexPage = ({
   },
 }) => {
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .filter(edge => edge.node.fields.slug.split('/')[1] === 'blog') // You can filter your posts based on some criteria
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
-  return <div>{Posts}</div>
+  return (
+    <Layout navLocation="blog">
+      <SEO title="Blog" />
+      <div>{Posts}</div>
+    </Layout>
+  )
 }
 
 export default BlogIndexPage
