@@ -7,7 +7,7 @@ title: "Bashrc vs Bashprofile"
 
 What are the differences between .bashrc and .bash_profile? Why are they required? Where should they be present? What to do in case they are absent in user's home directory? Where are environment variables and path declared in linux? If you are haunted by any of these questions and want to get a solid grasp in no time, you are at the perfect place. 
 
-Although you will fully understand this just by reading along, still it is highly recommended to execute the below commands in your own terminal running bash. The commands and concepts presented here are not specific to any particular linux diastro, but are valid in general.
+Although you should fully understand this just by reading along, still it is highly recommended to execute the below commands in your own terminal running bash. The commands and concepts presented here are not specific to any particular linux diastro, but are valid in general.
 
 > The whole essence of working with Linux is to explore yourself without blindly trusting anyone, not even me! Before executing any command presented in this article, feel free to explore their `man` pages to know their usages and impacts. 
 
