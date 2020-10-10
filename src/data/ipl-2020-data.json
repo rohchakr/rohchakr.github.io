@@ -1,0 +1,14 @@
+[
+    {"Chennai Super Kings":[
+        {"Name":"MS Dhoni", "Price":150000000} 
+    ]},
+    {"Delhi Capitals":[]},
+    {"Kings XI Punjab":[]},
+    {"Kolkata Knight Riders":[]},
+    {"Mumbai Indians":[]},
+    {"Rajasthan Royals":[]},
+    {"Royal Challengers Bangalore":[
+        {"Name":"Virat Kohli", "Price":170000000}
+    ]},
+    {"Sunrisers Hyderabad":[]}
+]
