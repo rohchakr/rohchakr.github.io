@@ -12,7 +12,10 @@ const createViz = (iplData) => {
     //     .attr('width',500).attr('height',500)
     //     .style('border', '1px solid grey')
     document.getElementById("svgWrapper").appendChild(chart(iplData))
-    document.getElementById("chartCanvas").style.width = "150%"
+    document.getElementById("chartCanvas").style.height = "50vh"
+    document.getElementById("chartCanvas").style.width = "80vw"
+    // document.getElementById("chartCanvas").style.minWidth = "100%"
+    // document.getElementById("chartCanvas").style.maxWidth = "600px"
 }
 
 const IPLTeamViz = () => {
@@ -80,7 +83,7 @@ teams.forEach((team1) => {
 
 const links = playerLinks.concat(teamLinks)
 
-const height = 350
+const height = 300
 const width = 400
 const svg = d3.create("svg")
     .attr("id", "chartCanvas")
