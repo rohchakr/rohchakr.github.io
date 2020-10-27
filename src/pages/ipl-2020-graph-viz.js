@@ -56,9 +56,9 @@ const drag = simulation => {
     
     return d3.drag()
         .on("start", dragstarted)
-        .on("drag", dragged)
-        .on("end", dragended);
-  }
+        .on("drag", dragged);
+        // .on("end", dragended); // commented out to preserve the position after drag
+}
 
 const chart = (data) => {
 const teams = data.map((team) => Object.keys(team)[0]);
@@ -113,7 +113,7 @@ const node = svg.append("g")
             .attr("fill", "rgb(225, 205, 200)")
             .call(drag(simulation))
 
-            simulation.on("tick", () => {
+    simulation.on("tick", () => {
     link
         .attr("x1", d => d.source.x)
         .attr("y1", d => d.source.y)
@@ -123,9 +123,24 @@ const node = svg.append("g")
     node
         .attr("cx", d => d.x)
         .attr("cy", d => d.y);
-  });
+    });
 
 //   invalidation.then(() => simulation.stop());
+
+svg.call(d3.zoom()
+    .extent([[0, 0], [width, height]])
+    .scaleExtent([0.5, 8])
+    .on("zoom", zoomed));
+
+// function zoomed() {
+//     node.attr("transform", d3.event.transform)
+//     link.attr("transform", d3.event.transform)
+// }
+
+function zoomed({transform}) {
+    node.attr("transform", transform)
+    link.attr("transform", transform)
+}
 
 return svg.node();
 }
