@@ -13,9 +13,9 @@ const createViz = (iplData) => {
     //     .style('border', '1px solid grey')
     document.getElementById("svgWrapper").appendChild(chart(iplData))
     document.getElementById("chartCanvas").style.height = "50vh"
-    document.getElementById("chartCanvas").style.width = "80vw"
+    // document.getElementById("chartCanvas").style.width = "80vw"
     // document.getElementById("chartCanvas").style.minWidth = "100%"
-    // document.getElementById("chartCanvas").style.maxWidth = "600px"
+    document.getElementById("chartCanvas").style.maxWidth = "80vw"
 }
 
 const IPLTeamViz = () => {
