@@ -11,6 +11,12 @@
     overflow-x: auto;
     margin-left: 0;
 }
+@media only screen and (max-width: 600px) {
+    .navArea > ul {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+}
 .navArea li {
     list-style-type: none;
     padding: 0.4em 1em;
