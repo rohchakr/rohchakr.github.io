@@ -16,9 +16,10 @@ const NavigationArea = ({ location }) => (
     <ul>
       <NavItem text='Home' url='/' focus={location === 'home'}/>
       <NavItem text='About' url='/about' focus={location === 'about'}/>
+      <NavItem text='Career Timeline' url='/career-timeline' focus={location === 'career-timeline'}/>
       <NavItem text='Blog' url='/blog' focus={location === 'blog'}/>
-      <NavItem text='Portfolio' url='/portfolio' focus={location === 'portfolio'}/>
-      <NavItem text='Miscellaneous' url='/misc' focus={location === 'misc'}/>
+      {/* <NavItem text='Portfolio' url='/portfolio' focus={location === 'portfolio'}/> */}
+      {/* <NavItem text='Miscellaneous' url='/misc' focus={location === 'misc'}/> */}
     </ul>
   </nav>
 )

@@ -1,0 +1,42 @@
+[
+    {
+        "time": "2011",
+        "event": "Class 10 | All India Secondary School Examination (AISSE)",
+        "desc": {
+            "result": "10/10 CGPA"
+        },
+        "details": {
+            "school": "Cambrian Public School, Kanke Road, Ranchi, India",
+            "grantingInstitution": "CBSE (Central Board of Secondary Education), New Delhi, India"
+        }
+    },
+    {
+        "time": "2013",
+        "event": "Class 12 | All India Senior School Certificate Examination (AISSCE)",
+        "desc": {
+            "result": "94.2%"
+        },
+        "details": {
+            "school": "DAV Public School, Unit-8, Bhubaneswar, India",
+            "grantingInstitution": "CBSE (Central Board of Secondary Education), New Delhi, India"
+        }
+    },
+    {
+        "time": "2018-06",
+        "event": "B.Tech (Bachelor of Technology) in Computer Science",
+        "desc": {
+            "result": "9.2/10 CGPA"
+        },
+        "details": {
+            "college": "National Institute of Technology, Agartala, India",
+            "recognition": "Institute of National Importance by Ministry of Human Resource and Development, India"
+        }
+    },
+    {
+        "time": "2018-07",
+        "event": "Applications Developer",
+        "details": {
+            "company": "Oracle, Hyderabad, India"
+        }
+    }
+]

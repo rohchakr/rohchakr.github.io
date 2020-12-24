@@ -640,6 +640,17 @@ pre tt:after {
 #mainWrapper {
   flex-grow: 1;
   max-width: 100%;
+  width: 100vmin;
+}
+
+#svgWrapper {
+  position: relative;
+  margin: auto;
+  opacity: 0.5;
+  background-color: #ffc8c8;
+}
+#chartCanvas {
+  margin: 0 1.0875rem 1.45rem; /* Same as mainWrapper padding in layout.js */
 }
 
 @media only screen and (max-width: 480px) {
