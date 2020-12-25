@@ -10,7 +10,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <h1>Hi,</h1>
     <p>Greetings from Rohit Chakraborty! So glad to see you here.</p>
-    <p>This website is intended to share my professional journey, technical notes, lifestyle preferences and general life experience. It also helps me getting more organized, perform experiments and improve my Web Development, Automation and Product Strategy and Communication skills.</p>
+    <p>This website is intended to share my professional journey, technical how-to's, lifestyle preferences and general life experience. It also helps me getting more organized, perform experiments and improve my Web Development, Automation and Product Strategy and Communication skills.</p>
     {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div> */}
