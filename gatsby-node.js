@@ -78,3 +78,20 @@ createSlug = (filePath) => {
     // FIXME: Use regex to hide long paths for blogs
     return filePath
 }
+
+// https://www.gatsbyjs.com/docs/debugging-html-builds/
+// @rohchakr
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /react-google-font-loader/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
