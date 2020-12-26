@@ -6,10 +6,9 @@
  */
 
 import React from "react"
+import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
-import GoogleFontLoader from "react-google-font-loader"
 
 import Header from "./header"
 import Footer from "./footer"
@@ -28,26 +27,12 @@ const Layout = ({ children, navLocation }) => {
 
   return (
     <>
-    <GoogleFontLoader
-    fonts={[
-      {
-        font: 'Roboto',
-        weights: [400],
-        // weights: [400, '400i'],
-      },
-      {
-        font: 'Roboto Mono',
-        weights: [400],
-        // weights: [400, 700],
-      },
-      {
-        font: 'Source Code Pro',
-        weights: [400],
-      },
-    ]}
-  />
+      <Helmet>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&family=Source+Code+Pro&display=swap" rel="stylesheet" />
+      </Helmet>
       <div id="headerWrapper">
-        <Header siteTitle={data.site.siteMetadata.title} navLocation={navLocation}/>
+        <Header siteTitle={data.site.siteMetadata.title} navLocation={navLocation} />
       </div>
       <div id="mainWrapper"
         style={{
