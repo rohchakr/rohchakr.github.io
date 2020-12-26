@@ -41,8 +41,8 @@ const NavigationArea = () => (
     <h3>Explore</h3>
     <ul>
       <NavItem text='About' url='/about' />
+      <NavItem text='Career Timeline' url='/career-timeline' />
       <NavItem text='Blog' url='/blog' />
-      <NavItem text='Portfolio' url='/portfolio' />
       <NavItem text='Miscellaneous' url='/misc' />
       <NavItem text='Legal' url='/legal' />
     </ul>

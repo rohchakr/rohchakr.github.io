@@ -8,23 +8,27 @@
 }
 .menuButton {
     margin: 0;
-    margin-bottom: 1.45rem;
     background-color: rgb(50, 25, 5);
     color: rgb(245, 235, 200);
     border: none;
+    border-radius: 0.2em;
+    outline: none;
     cursor: pointer;
     font-size: 1.5em;
 }
-.navArea {
+.navAreaWide {
+    display: none;
+}
+.navAreaAll {
     width: 60%;
     margin: auto;
 }
-.navArea > ul{
+.navAreaAll > ul{
     display: flex;
     flex-flow: column nowrap;
     margin-left: 0;
 }
-.navArea li {
+.navAreaAll li {
     list-style-type: none;
     padding: 0.4em 1em;
     margin: 0.5em 1px 0 1px;
@@ -79,17 +83,21 @@
         display: none;
     }
 
-    .navArea {
+    .navAreaWide {
+        display: block;
+    }
+
+    .navAreaAll, .navAreaWide {
         width: 100%;
     }
 
-    .navArea > ul {
+    .navAreaAll > ul, .navAreaWide > ul {
         display: flex;
         flex-flow: row nowrap;
         overflow-x: auto;
         margin-left: 0;
     }
-    .navArea li {
+    .navAreaAll li, .navAreaWide li {
         list-style-type: none;
         padding: 0.4em 1em;
         margin: 0.5em 1px 0 1px;
