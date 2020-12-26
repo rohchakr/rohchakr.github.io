@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { VscMenu } from "react-icons/vsc"
 import headerStyles from "./header.module.css"
 
 const NavItem = ({ text, url, focus }) => (
@@ -39,6 +40,9 @@ const Header = ({ siteTitle, navLocation }) => (
         </Link>
       </h1>
     </div> */}
+    <button className={headerStyles.menuButton}>
+      <VscMenu />
+    </button>
     <NavigationArea location={navLocation}/>
   </header>
 )
