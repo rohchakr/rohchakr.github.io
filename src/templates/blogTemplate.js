@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
+import { VscCalendar } from "react-icons/vsc"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -16,7 +17,7 @@ export default function Template({
         <div className="blog-post-container">
         <div className="blog-post">
             <h1>{frontmatter.title}</h1>
-            <h2>{frontmatter.date}</h2>
+            <h6 className="blog-post-date"><VscCalendar /> <p>{frontmatter.date}</p></h6>
             <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
