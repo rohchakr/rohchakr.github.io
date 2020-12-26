@@ -647,12 +647,22 @@ pre tt:after {
   margin: 0 1.0875rem 1.45rem; /* Same as mainWrapper padding in layout.js */
 }
 
-.blog-post-date {
+.blog-post-caption > ul {
   display: flex;
+  /* flex-direction: column; */
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-left: 0;
+}
+.blog-post-caption > ul > li {
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
   font-weight: 600;
+  list-style-type: none;
+  margin: 0 1.45rem;
 }
-.blog-post-date p {
+.blog-post-caption p {
   margin: 0 5px;
 }
 
