@@ -8,6 +8,7 @@
 }
 .menuButton {
     margin: 0;
+    display: flex;
     background-color: rgb(50, 25, 5);
     color: rgb(245, 235, 200);
     border: none;
