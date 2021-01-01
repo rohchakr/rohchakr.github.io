@@ -1,84 +1,57 @@
-import React, { useEffect } from "react"
-import * as d3 from "d3"
+import React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import Image from "../components/image"
 import SEO from "../components/seo"
-import CareerData from "../data/career-timeline.json"
 
-const createViz = (careerData) => {
-    console.log(d3.version)
-    console.log(careerData)
+const IndexPage = () => (
+  <Layout navLocation="career-timeline">
+    <SEO title="Career Timeline" />
+
+    <h5>2020</h5>
+    <p>Learnt data visualization concepts. Designed and developed advanced visualizations using d3.js.</p>
+
+    <h5>2019</h5>
+    <p>Introduced to full-stack web development based on JavaEE-JSP stack. Fixed security vulnerabilities.</p>
+
+    <h5>2018</h5>
+    <p>Started job at Oracle as an Applications Developer. Worked with Docker and Kubernetes(minikube).</p>
     
-    document.getElementById("svgWrapper").appendChild(chart(careerData))
-}
+    <h5>2017</h5>
+    <p>Introduced to Machine Learning and Natural Language Processing. Carried out a research work in Twitter Network Analysis.</p>
 
-const CareerTimelineViz = () => {
-    useEffect(
-        () => createViz(CareerData),
-        []
-    )
+    <h5>2016</h5>
+    <p>Got started with Android Development. Developed and deployed an app in Google Play Store.</p>
 
-    return (
-        <Layout navLocation="career-timeline">
-            <SEO title="Career Timeline" />
-            <div id='svgWrapper'>
-            </div>
-        </Layout>
-    )
-}
+    <h5>2015</h5>
+    <p>Introduced to Linux and open source softwares for the first time. Learnt about dual-boot and disk partitions. Learnt basic CSS and JavaScript.</p>
 
-export default CareerTimelineViz
+    <h5>2014</h5>
+    <p>Got started with C and gcc compiler. Practised algorithmic problems in CodeChef.</p>
 
-const chart = (data) => {
-    // Main Timeline Axis
-    const t1x = {}
-    t1x.domain = [1990, 2025]
-    t1x.tickValues = [1995, 2000, 2011, 2013, 2014, 2018, 2020]
+    <h5>2012</h5>
+    <p>Introduced to sorting algorithms - bubble sort, selection sort, insertion sort and merge sort. Completed my first application - A C++ Calender application as part of school project</p>
+
+    <h5>2011</h5>
+    <p>Introduced to Object Oriented Programming paradigm, linked-lists stack and queue data structures.</p>
+
+    <h5>2008</h5>
+    <p>Got started with C++ (Turbo C++ compiler)</p>
+
+    <h5>2007</h5>
+    <p>Learnt arrays, conditional statements and loops(GOTO statement).</p>
+
+    <h5>2006</h5>
+    <p>Worked with my first high-level programming language - BASIC. Learnt to create basic web page in HTML.</p>
+
+    <h5>2005</h5>
+    <p>Got first glimpse of algorithm, flowchart, programming and command line interface. Learnt to draw shapes and patterns in LOGO.</p>
     
-    const height = 300
-    const width = 400
-    const svg = d3.create("svg")
-        .attr("id", "chartCanvas")
-        .attr("viewBox", [0, 0, width, height])
+    <h5>2003</h5>
+    <p>First time studied Computer Science as a course curriculum in school. Got hands into Typing Tutor and MS-Paint.</p>
+    
+  </Layout>
+)
 
-    const xGap = 10
-
-    t1x.range = [xGap, width - xGap]
-    t1x.scale = d3.scaleLinear().domain(t1x.domain).range(t1x.range)
-    t1x.axis = d3.axisBottom(t1x.scale)
-                    .tickValues(t1x.tickValues)
-                    .tickFormat(d => d3.format("d")(d))
-                    
-    console.log(t1x)
-
-    svg.append("g")
-        .attr("class", "taxis")
-        .attr("transform", "translate(0, 100)") // default tick size = 6
-        .call(t1x.axis)
-        .call(g => g.select('.domain').remove()) // https://observablehq.com/@d3/styled-axes
-
-    let tbarPath = ''
-    const halfTbarWidth = {
-        "start": 2.5,
-        "end": 10
-    }
-    console.log(halfTbarWidth)
-
-    tbarPath = tbarPath.concat('m ' + xGap + '-' + halfTbarWidth.start)
-        .concat(' l ' + halfTbarWidth.start + ' ' + halfTbarWidth.start)
-        .concat(' l ' + (width - 2 * xGap - halfTbarWidth.end - halfTbarWidth.start) + ' 0')
-        .concat(' l ' + halfTbarWidth.end + ' -' + halfTbarWidth.end)
-        .concat(' l -' + halfTbarWidth.end + ' -' + halfTbarWidth.end)
-        .concat(' l -' + (width - 2 * xGap - halfTbarWidth.end - halfTbarWidth.start) + ' ' + 2 * (halfTbarWidth.end - halfTbarWidth.start))
-        .concat(' z')
-
-    svg.append("path")
-        .attr("class", "tbar")
-        .attr("transform", "translate(0, 100)")
-        .attr("stroke", "black")
-        .attr("fill", "none")
-        .attr("d", tbarPath)
-
-
-    return svg.node();
-}
+export default IndexPage
