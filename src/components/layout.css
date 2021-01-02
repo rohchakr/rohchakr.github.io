@@ -673,6 +673,22 @@ pre tt:after {
   text-decoration: none;
 }
 
+.resumeButton {
+  margin-bottom: 1.45rem;
+  cursor: pointer;
+  color: #f5ebc8;
+  background-color: #321905;
+  outline: none;
+  border: none;
+  border-radius: 0.2em;
+  padding: 0.5em;
+}
+
+.resumeButton:hover, .resumeButton:active {
+  background-color: rgb(90, 45, 10);
+  color: #ffffff;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
