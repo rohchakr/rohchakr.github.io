@@ -11,11 +11,11 @@ const screen = {
   SMALL: 'small'
 }
 const NavItem = ({ text, url, focus }) => (
-  <li className={focus ? headerStyles.navItemFocus : headerStyles.navItem}>
-    <Link to={url}>
+  <Link to={url}>
+    <li className={focus ? headerStyles.navItemFocus : headerStyles.navItem}>
       <p>{text}</p>
-    </Link>
-  </li>
+    </li>
+  </Link>
 )
 
 const NavigationArea = ({ location, visibleFor }) => {
@@ -32,6 +32,7 @@ const NavigationArea = ({ location, visibleFor }) => {
         <NavItem text='About' url='/about' focus={location === 'about'} />
         <NavItem text='Career Timeline' url='/career-timeline' focus={location === 'career-timeline'} />
         <NavItem text='Blog' url='/blog' focus={location === 'blog'} />
+        <NavItem text='Contact' url='/contact' focus={location === 'contact'} />
         {/* <NavItem text='Portfolio' url='/portfolio' focus={location === 'portfolio'}/> */}
         {/* <NavItem text='Miscellaneous' url='/misc' focus={location === 'misc'}/> */}
       </ul>
