@@ -5,10 +5,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const PostLink = ({ post }) => (
-    <div>
-      <Link to={post.fields.slug}>
-        {post.frontmatter.title} ({post.frontmatter.date})
-      </Link>
+    <div className="blogContents">
+        <h4>
+          <Link to={post.fields.slug}>{post.frontmatter.title} ({post.frontmatter.date})
+          </Link>
+        </h4>
     </div>
   )
 

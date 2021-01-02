@@ -689,6 +689,15 @@ pre tt:after {
   color: #ffffff;
 }
 
+.blogContents a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.blogContents a:hover, a:active {
+  background-color: #f5ebc8;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

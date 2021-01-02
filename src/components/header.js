@@ -11,11 +11,11 @@ const screen = {
   SMALL: 'small'
 }
 const NavItem = ({ text, url, focus }) => (
-  <Link to={url}>
-    <li className={focus ? headerStyles.navItemFocus : headerStyles.navItem}>
+  <li className={focus ? headerStyles.navItemFocus : headerStyles.navItem}>
+    <Link to={url}>
       <p>{text}</p>
-    </li>
-  </Link>
+    </Link>
+  </li>
 )
 
 const NavigationArea = ({ location, visibleFor }) => {

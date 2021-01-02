@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import { VscCalendar } from "react-icons/vsc"
+import { VscArrowLeft } from "react-icons/vsc"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -31,7 +32,7 @@ export default function Template({
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
             />
-            <Link to="/">Go back to the homepage</Link>
+            <Link to="/blog/"><VscArrowLeft /></Link>
         </div>
         </div>
     </Layout>
