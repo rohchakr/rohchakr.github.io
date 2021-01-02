@@ -667,6 +667,12 @@ pre tt:after {
   margin: 0 5px;
 }
 
+.blog-post-content > p > a {
+  color: #321905cc;
+  background-color: #f5ebc8;
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
