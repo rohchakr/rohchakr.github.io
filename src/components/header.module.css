@@ -31,9 +31,11 @@
 }
 .navAreaAll li {
     list-style-type: none;
-    padding: 0.4em 1em;
     margin: 0.5em 1px 0 1px;
     cursor: pointer;
+}
+.navAreaAll li > a > p {
+    padding: 0.4rem 1rem;
 }
 .header a:link {
     text-decoration: none;
@@ -100,9 +102,11 @@
     }
     .navAreaAll li, .navAreaWide li {
         list-style-type: none;
-        padding: 0.4em 1em;
         margin: 0.5em 1px 0 1px;
         cursor: pointer;
+    }
+    .navAreaAll li > a > p, .navAreaWide li > a > p {
+        padding: 0.4rem 1rem;
     }
     .header a:link {
         text-decoration: none;
