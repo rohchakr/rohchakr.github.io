@@ -674,6 +674,8 @@ pre tt:after {
 }
 
 .resumeButton {
+  display: flex;
+  align-items: center;
   margin-bottom: 1.45rem;
   cursor: pointer;
   color: #f5ebc8;
@@ -681,7 +683,12 @@ pre tt:after {
   outline: none;
   border: none;
   border-radius: 0.2em;
-  padding: 0.5em;
+  padding: 0.3em 0.7em;
+}
+
+.resumeButton > p {
+  margin: 0.5rem;
+  margin-left: 0;
 }
 
 .resumeButton:hover, .resumeButton:active {
