@@ -10,7 +10,7 @@ const IndexPage = () => (
   <Layout navLocation="career-timeline">
     <SEO title="Career Timeline" />
 
-    <a href="https://rohchakr.github.io/resume/RohitChakraborty_Resume.pdf" target="_blank"><button className="resumeButton"><p>Resume</p><MdOpenInNew /></button></a>
+    <a href="https://rohchakr.github.io/resume/RohitChakraborty_Resume.pdf" target="_blank" style={{textDecoration: `none`}}><button className="resumeButton"><p>Resume</p><MdOpenInNew /></button></a>
 
     <h5>2020</h5>
     <p>Invested more in code quality and design patterns. Learnt data visualization concepts. Interacted more with the strategy team. Designed and developed advanced visualizations for Oracle Construction Intelligence Cloud. My first github PR got merged. Started working for my website.</p>
