@@ -3,7 +3,7 @@ import { VscGithub } from "react-icons/vsc"
 import { FaTwitter, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa"
 import { MdOpenInNew } from "react-icons/md"
 import * as Contacts from "../constants/contact-url"
-import footerStyles from "./footer.module.css"
+import * as footerStyles from "./footer.module.css"
 
 const Item = ({ icon, text, url }) => (
   <li>

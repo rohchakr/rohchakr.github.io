@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 import { VscMenu, VscClose } from "react-icons/vsc"
-import headerStyles from "./header.module.css"
+import * as headerStyles from "./header.module.css"
 
 // wide and small is based on the size limits in header.module.css
 const screen = {
