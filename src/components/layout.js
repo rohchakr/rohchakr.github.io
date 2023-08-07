@@ -6,13 +6,19 @@
  */
 
 import React from "react"
-import Helmet from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
+
+export const Head = () => (
+  <>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&family=Source+Code+Pro&display=swap" rel="stylesheet" />
+  </>
+)
 
 const Layout = ({ children, navLocation }) => {
   const data = useStaticQuery(graphql`
@@ -27,10 +33,6 @@ const Layout = ({ children, navLocation }) => {
 
   return (
     <>
-      <Helmet>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&family=Source+Code+Pro&display=swap" rel="stylesheet" />
-      </Helmet>
       <div id="headerWrapper">
         <Header siteTitle={data.site.siteMetadata.title} navLocation={navLocation} />
       </div>

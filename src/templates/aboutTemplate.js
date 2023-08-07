@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { SEO } from "../components/seo"
 
 const linkStyle = {
   color: `#f5ebc8`,
@@ -25,7 +25,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout navLocation="about">
-        <SEO title="About" />
+        <SEO title="About | rohchakr" />
         <div className="blog-post-container">
         <div className="blog-post">
             <p style={notificationStyle}>Please head over to the <Link to='/career-timeline/' style={linkStyle}>Career Timeline</Link> page if you are more interested in my professional journey.</p>

@@ -5,16 +5,17 @@ import { VscCalendar } from "react-icons/vsc"
 import { VscArrowLeft } from "react-icons/vsc"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { SEO } from "../components/seo"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+  const title = `${frontmatter.title} | rohchakr`
   return (
     <Layout navLocation="blog">
-        <SEO title={frontmatter.title} />
+        <SEO title={title} />
         <div className="blog-post-container">
         <div className="blog-post">
             <h1>{frontmatter.title}</h1>
