@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { SEO } from "../components/seo"
 
 const PostLink = ({ post }) => (
     <div className="blogContents">
@@ -25,7 +25,7 @@ const BlogIndexPage = ({
 
   return (
     <Layout navLocation="blog">
-      <SEO title="Blog" />
+      <SEO title="Blog | rohchakr" />
       <div>{Posts}</div>
     </Layout>
   )

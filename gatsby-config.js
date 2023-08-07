@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Rohit Chakraborty`,
-    description: `Personal Website`,
-    author: `@rohchakr`,
+    title: `rohchakr`,
+    description: `Rohit Chakraborty's portfolio website`,
+    twitterUsername: `@rohchakr`,
+    image: `/Github Social Preview.png`,
+    siteUrl: `https://rohchakr.github.io`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

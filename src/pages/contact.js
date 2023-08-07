@@ -3,13 +3,13 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import ContactSection from "../components/contact-area"
-import SEO from "../components/seo"
+import { SEO } from "../components/seo"
 
 const headingText = 'Follow and/or drop me a line at:'
 
 const ContactPage = () => (
   <Layout navLocation="contact">
-    <SEO title="Contact" />
+    <SEO title="Contact | rohchakr" />
     <ContactSection headingText={headingText}/>
   </Layout>
 )

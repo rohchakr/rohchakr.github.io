@@ -4,11 +4,11 @@ import React from "react"
 import { MdOpenInNew } from "react-icons/md"
 import Layout from "../components/layout"
 // import Image from "../components/image"
-import SEO from "../components/seo"
+import { SEO } from "../components/seo"
 
 const IndexPage = () => (
   <Layout navLocation="career-timeline">
-    <SEO title="Career Timeline" />
+    <SEO title="Career Timeline | rohchakr" />
 
     <a href="https://rohchakr.github.io/resume/RohitChakraborty_Resume.pdf" target="_blank" style={{textDecoration: `none`}}><button className="resumeButton"><p>Resume</p><MdOpenInNew /></button></a>
 
