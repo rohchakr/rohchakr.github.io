@@ -24,6 +24,9 @@
     "gh-pages": "^2.2.0",
     "prettier": "2.0.5"
   },
+  "optionalDependencies": {
+    "@parcel/watcher-linux-x64-glibc": "2.2.0"
+  },
   "keywords": [
     "gatsby"
   ],
