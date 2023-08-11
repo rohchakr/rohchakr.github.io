@@ -1,11 +1,17 @@
 .header {
     margin-bottom: 1.45rem;
-    /* box-shadow: 0 0.5em 1.5em -0.5em #502505;  */
     padding: 1rem;
     background-color: rgb(50, 25, 5);
     color: rgb(245, 235, 200);
     opacity: 0.9;
 }
+
+.logoArea {
+    padding: 0.4rem 0.4rem;
+    display: flex;
+    justify-content: center;
+}
+
 .menuButton {
     margin: 0;
     display: flex;
@@ -17,64 +23,84 @@
     cursor: pointer;
     font-size: 1.5em;
 }
+
 .navAreaWide {
     display: none;
 }
+
 .navAreaAll {
     width: 60%;
     margin: auto;
 }
-.navAreaAll > ul{
+
+.navAreaAll>ul {
     display: flex;
     flex-flow: column nowrap;
     margin-left: 0;
 }
+
 .navAreaAll li {
     list-style-type: none;
-    margin: 0.5em 1px 0 1px;
+    margin: 0.4rem 1px 0 1px;
     cursor: pointer;
 }
-.navAreaAll li > a > p {
+
+.navAreaAll li>a>p {
     padding: 0.4rem 1rem;
 }
+
 .header a:link {
     text-decoration: none;
     color: inherit;
 }
+
 .header a:visited {
     text-decoration: none;
     color: inherit;
 }
+
 .header a:hover {
     text-decoration: none;
     color: inherit;
 }
+
 .header a:active {
     text-decoration: none;
     color: inherit;
 }
-.navItemFocus {
+
+.navItemFocus p {
     background-color: white;
     color: rgb(50, 25, 5);
 }
+
 .navItem {
     background-color: inherit;
 }
-.navItem:hover, .navItem:active, .menuButton:hover, .menuButton:active {
+
+.navItem p:hover,
+.navItem p:active,
+.menuButton p:hover,
+.menuButton p:active {
     color: white;
     background-color: rgb(90, 45, 10);
 }
-.navItem p, .navItemFocus p {
+
+.navItem p,
+.navItemFocus p {
     text-align: center;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .header ul::-webkit-scrollbar {
-    display:none;
+    display: none;
 }
-.header ul{
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+
+.header ul {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 @media only screen and (min-width: 720px) {
@@ -90,58 +116,86 @@
         display: block;
     }
 
-    .navAreaAll, .navAreaWide {
+    .navAreaAll,
+    .navAreaWide {
         width: 100%;
     }
 
-    .navAreaAll > ul, .navAreaWide > ul {
+    .navAreaAll>ul,
+    .navAreaWide>ul,
+    .navAreaWide>ul .menuButtonsListArea {
         display: flex;
         flex-flow: row nowrap;
         overflow-x: auto;
         margin-left: 0;
     }
-    .navAreaAll li, .navAreaWide li {
+
+    .navAreaWide>ul .menuButtonsListAreaParent {
+        position: relative;
+    }
+
+    .navAreaWide>ul .menuButtonsListArea {
+        position: absolute;
+        bottom: 0;
+        white-space: nowrap;
+    }
+
+    .navAreaAll li,
+    .navAreaWide li {
         list-style-type: none;
-        margin: 0.5em 1px 0 1px;
+        margin: 0 1px 0 1px;
         cursor: pointer;
     }
-    .navAreaAll li > a > p, .navAreaWide li > a > p {
+
+    .navAreaAll li>a>p,
+    .navAreaWide li>a>p {
         padding: 0.4rem 1rem;
     }
+
     .header a:link {
         text-decoration: none;
         color: inherit;
     }
+
     .header a:visited {
         text-decoration: none;
         color: inherit;
     }
+
     .header a:hover {
         text-decoration: none;
         color: inherit;
     }
+
     .header a:active {
         text-decoration: none;
         color: inherit;
     }
-    .navItemFocus {
+
+    .navItemFocus p {
         background-color: white;
         color: rgb(50, 25, 5);
     }
-    .navItem {
+
+    .navItem>a>p {
         background-color: rgb(100, 60, 40);
     }
-    .navItem:hover, .navItem:active {
+
+    .navItem p:hover,
+    .navItem p:active {
         color: white;
         background-color: rgb(90, 45, 10);
     }
-    
+
     /* Hide scrollbar for Chrome, Safari and Opera */
     .header ul::-webkit-scrollbar {
-        display:none;
+        display: none;
     }
-    .header ul{
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
+
+    .header ul {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
     }
 }
