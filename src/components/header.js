@@ -12,13 +12,23 @@ const screen = {
   SMALL: 'small'
 }
 
-const NavItem = ({ text, url, focus }) => (
-  <li className={focus ? headerStyles.navItemFocus : headerStyles.navItem}>
-    <Link to={url}>
-      <p>{text}</p>
-    </Link>
-  </li>
-)
+const NavItem = ({ text, url, focus }) => {
+  if (focus) {
+    return (
+      <li className={headerStyles.navItemFocus}>
+        <p className={headerStyles.menuItemContent}>{text}</p>
+      </li>
+    )
+  }
+
+  return (
+    <li className={headerStyles.navItem}>
+      <Link to={url}>
+        <p className={headerStyles.menuItemContent}>{text}</p>
+      </Link>
+    </li>
+  )
+}
 
 const NavigationArea = ({ location, visibleFor }) => {
   let navAreaClassName = headerStyles.navAreaAll
@@ -30,20 +40,13 @@ const NavigationArea = ({ location, visibleFor }) => {
   return (
     <nav className={navAreaClassName}>
       <ul>
-        <li className={headerStyles.logoArea}>
-          <RohChakrLogo />
-        </li>
-        <li className={headerStyles.menuButtonsListAreaParent}>
-          <li className={headerStyles.menuButtonsListArea}>
-            <NavItem text='Home' url='/' focus={location === 'home'} />
-            <NavItem text='About' url='/about' focus={location === 'about'} />
-            <NavItem text='Career Timeline' url='/career-timeline' focus={location === 'career-timeline'} />
-            <NavItem text='Blog' url='/blog' focus={location === 'blog'} />
-            <NavItem text='Contact' url='/contact' focus={location === 'contact'} />
-            {/* <NavItem text='Portfolio' url='/portfolio' focus={location === 'portfolio'}/> */}
-            {/* <NavItem text='Miscellaneous' url='/misc' focus={location === 'misc'}/> */}
-          </li>
-        </li>
+        <NavItem text='Home' url='/' focus={location === 'home'} />
+        <NavItem text='About' url='/about' focus={location === 'about'} />
+        <NavItem text='Career Timeline' url='/career-timeline' focus={location === 'career-timeline'} />
+        <NavItem text='Blog' url='/blog' focus={location === 'blog'} />
+        <NavItem text='Contact' url='/contact' focus={location === 'contact'} />
+        {/* <NavItem text='Portfolio' url='/portfolio' focus={location === 'portfolio'}/> */}
+        {/* <NavItem text='Miscellaneous' url='/misc' focus={location === 'misc'}/> */}
       </ul>
     </nav>
   )
@@ -57,35 +60,42 @@ const Header = ({ siteTitle, navLocation }) => {
   }
 
   if (toggle === false) {
+    // All screens
     return (
       <header className={headerStyles.header}>
         <button className={headerStyles.menuButton} onClick={toggleMenu}>
           <VscMenu />
         </button>
-        <NavigationArea location={navLocation} visibleFor={screen.WIDE} />
+        <div className={headerStyles.menuBarHorizontal}>
+          <div className={headerStyles.menuItemsContainer}>
+            <div className={headerStyles.logoContainer}>
+              <RohChakrLogo />
+            </div>
+            <div className={headerStyles.navContainer}>
+              <NavigationArea location={navLocation} visibleFor={screen.WIDE} />
+            </div>
+          </div>
+        </div>
       </header>
     )
   }
 
   return (
+    // Only small screens if toggle is on
     <header className={headerStyles.header}>
-      {/* <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link to="/">
-          {siteTitle}
-        </Link>
-      </h1>
-    </div> */}
       <button className={headerStyles.menuButton} onClick={toggleMenu}>
         <VscClose />
       </button>
-      <NavigationArea location={navLocation} visibleFor={screen.ALL} />
+      <div className={headerStyles.menuBar}>
+        <div className={headerStyles.menuItemsContainer}>
+          <div className={headerStyles.logoContainer}>
+            <RohChakrLogo />
+          </div>
+          <div className={headerStyles.navContainer}>
+            <NavigationArea location={navLocation} visibleFor={screen.ALL} />
+          </div>
+        </div>
+      </div>
     </header>
   )
 }
