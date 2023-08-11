@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: `https://rohchakr.github.io`,
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

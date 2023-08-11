@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 import { VscMenu, VscClose } from "react-icons/vsc"
+import RohChakrLogo from "./rohchakr-logo"
 import * as headerStyles from "./header.module.css"
 
 // wide and small is based on the size limits in header.module.css
@@ -10,6 +11,7 @@ const screen = {
   ALL: 'all',
   SMALL: 'small'
 }
+
 const NavItem = ({ text, url, focus }) => (
   <li className={focus ? headerStyles.navItemFocus : headerStyles.navItem}>
     <Link to={url}>
@@ -28,13 +30,20 @@ const NavigationArea = ({ location, visibleFor }) => {
   return (
     <nav className={navAreaClassName}>
       <ul>
-        <NavItem text='Home' url='/' focus={location === 'home'} />
-        <NavItem text='About' url='/about' focus={location === 'about'} />
-        <NavItem text='Career Timeline' url='/career-timeline' focus={location === 'career-timeline'} />
-        <NavItem text='Blog' url='/blog' focus={location === 'blog'} />
-        <NavItem text='Contact' url='/contact' focus={location === 'contact'} />
-        {/* <NavItem text='Portfolio' url='/portfolio' focus={location === 'portfolio'}/> */}
-        {/* <NavItem text='Miscellaneous' url='/misc' focus={location === 'misc'}/> */}
+        <li className={headerStyles.logoArea}>
+          <RohChakrLogo />
+        </li>
+        <li className={headerStyles.menuButtonsListAreaParent}>
+          <li className={headerStyles.menuButtonsListArea}>
+            <NavItem text='Home' url='/' focus={location === 'home'} />
+            <NavItem text='About' url='/about' focus={location === 'about'} />
+            <NavItem text='Career Timeline' url='/career-timeline' focus={location === 'career-timeline'} />
+            <NavItem text='Blog' url='/blog' focus={location === 'blog'} />
+            <NavItem text='Contact' url='/contact' focus={location === 'contact'} />
+            {/* <NavItem text='Portfolio' url='/portfolio' focus={location === 'portfolio'}/> */}
+            {/* <NavItem text='Miscellaneous' url='/misc' focus={location === 'misc'}/> */}
+          </li>
+        </li>
       </ul>
     </nav>
   )
