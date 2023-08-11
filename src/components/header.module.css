@@ -10,6 +10,7 @@
     padding: 0.4rem 0.4rem;
     display: flex;
     justify-content: center;
+    cursor: none;
 }
 
 .menuButton {
@@ -42,6 +43,9 @@
 .navAreaAll li {
     list-style-type: none;
     margin: 0.4rem 1px 0 1px;
+}
+
+.menuButtonsListArea a {
     cursor: pointer;
 }
 
@@ -140,11 +144,14 @@
         white-space: nowrap;
     }
 
+    .menuButtonsListArea a {
+        cursor: pointer;
+    }
+
     .navAreaAll li,
     .navAreaWide li {
         list-style-type: none;
         margin: 0 1px 0 1px;
-        cursor: pointer;
     }
 
     .navAreaAll li>a>p,
