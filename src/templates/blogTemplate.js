@@ -5,7 +5,6 @@ import { VscCalendar } from "react-icons/vsc"
 import { VscArrowLeft } from "react-icons/vsc"
 
 import Layout from "../components/layout"
-import CommentsArea from "../components/comments-area"
 import { SEO } from "../components/seo"
 
 export default function Template({
@@ -37,7 +36,6 @@ export default function Template({
             <Link to="/blog/"><VscArrowLeft /></Link>
         </div>
         </div>
-        <CommentsArea />
     </Layout>
   )
 }
