@@ -20,7 +20,7 @@ export const Head = () => (
   </>
 )
 
-const Layout = ({ children, navLocation }) => {
+const Layout = ({ children, navLocation, rightSideContent, leftSideContent }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -32,22 +32,29 @@ const Layout = ({ children, navLocation }) => {
   `)
 
   return (
-    <>
+    <div id="screenContainer">
       <div id="headerWrapper">
         <Header siteTitle={data.site.siteMetadata.title} navLocation={navLocation} />
       </div>
-      <div id="mainWrapper"
-        style={{
-          margin: `0 auto`,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
+      <div id="middleSection">
+        <div id="leftSideWrapper">
+          <aside>{leftSideContent}</aside>
+        </div>
+        <div id="mainWrapper"
+          style={{
+            padding: `0 1.0875rem 1.45rem`,
+          }}
+        >
+          <main>{children}</main>
+        </div>
+        <div id="rightSideWrapper">
+          <aside>{rightSideContent}</aside>
+        </div>
       </div>
       <div id="footerWrapper">
         <Footer />
       </div>
-    </>
+    </div>
   )
 }
 
