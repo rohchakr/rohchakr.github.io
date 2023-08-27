@@ -1,6 +1,8 @@
 ---
 date: "2020-09-25"
 title: "Top ten Sparetime Microtasks with Very Little Efforts"
+featuredImage:
+featuredImageAltText:
 ---
 
 Next time you are anxiously waiting for your online food order to get delivered and have exhausted all social media updates wondering how to spend next 5-10 minutes, don't let the precious time just run away in vain! Yes, you heard me right. We can effectively do more productive works during all such times throughout the day. Here are my top 10 list which do not require much physical or mental efforts, but would definitely improve our way of living: 

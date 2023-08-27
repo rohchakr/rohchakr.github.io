@@ -1,6 +1,34 @@
-.Container{
+.Container {
     display: flex;
     width: 100%;
     flex-direction: column;
     overflow: auto;
+}
+
+.BlogPostFeaturedArea {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.BlogPostFeaturedAreaContentSeparator {
+    background-color: #fff;
+    height: 1rem;
+}
+
+.BlogPostFeaturedAreaTextContent {
+    padding: 1em;
+    border: 1px solid rgb(50, 25, 5);
+}
+
+@media only screen and (min-width: 720px) {
+    .BlogPostFeaturedAreaTextContainer {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .BlogPostFeaturedAreaTextContent {
+        background-color: #fff;
+        opacity: 0.8;
+        border: 1px solid rgb(50, 25, 5);
+    }
 }

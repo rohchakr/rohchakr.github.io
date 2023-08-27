@@ -1,6 +1,8 @@
 ---
 date: "2020-09-19"
 title: "Bashrc vs Bashprofile"
+featuredImage:
+featuredImageAltText:
 ---
 
 # Linux Startup Settings (.bashrc and .bash_profile)

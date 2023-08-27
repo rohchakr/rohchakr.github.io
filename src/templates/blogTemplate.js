@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { VscCalendar } from "react-icons/vsc"
 import { VscArrowLeft } from "react-icons/vsc"
 
@@ -16,21 +17,32 @@ export default function Template({
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html, tableOfContents } = markdownRemark
   const title = `${frontmatter.title} | rohchakr`
+  const featuredImage = getImage(frontmatter.featuredImage?.childImageSharp?.gatsbyImageData)
+
   return (
     <Layout navLocation="blog" rightSideContent={<OnThisPage toc={tableOfContents} />}>
       <SEO title={title} />
       <div className={blogTemplateStyles.Container}>
-        <h1>{frontmatter.title}</h1>
-        <h6 className="blog-post-caption">
-          <ul>
-            <li>
-              <VscCalendar /> <p>{frontmatter.date}</p>
-            </li>
-            <li>
-              Author:<p>Rohit Chakraborty</p>
-            </li>
-          </ul>
-        </h6>
+        <div className={blogTemplateStyles.BlogPostFeaturedArea}>
+          <GatsbyImage image={featuredImage} alt={frontmatter.featuredImageAltText} />
+          <div className={blogTemplateStyles.BlogPostFeaturedAreaTextContainer}>
+            <div className={blogTemplateStyles.BlogPostFeaturedAreaContentSeparator}>
+            </div>
+            <div className={blogTemplateStyles.BlogPostFeaturedAreaTextContent}>
+              <h1>{frontmatter.title}</h1>
+              <h6 className="blog-post-caption">
+                <ul>
+                  <li>
+                    <VscCalendar /> <p>{frontmatter.date}</p>
+                  </li>
+                  <li>
+                    Author:<p>Rohit Chakraborty</p>
+                  </li>
+                </ul>
+              </h6>
+            </div>
+          </div>
+        </div>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -49,6 +61,12 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        featuredImageAltText
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData(width: 800)
+          }
+        }
       }
       tableOfContents
     }

@@ -1,6 +1,8 @@
 ---
 date: "2021-01-27"
 title: "Personal Routine"
+featuredImage:
+featuredImageAltText:
 ---
 
 # #100DaysOfCode

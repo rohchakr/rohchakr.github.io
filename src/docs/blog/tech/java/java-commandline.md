@@ -1,6 +1,8 @@
 ---
 date: "2020-12-23"
 title: "Run Java from CommandLine"
+featuredImage:
+featuredImageAltText:
 ---
 
 This article provides an all-in-one reference to compile, pack and run java source files with external dependencies from the command line.
