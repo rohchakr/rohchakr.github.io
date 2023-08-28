@@ -22,7 +22,7 @@ const greetingsImageAltText = "Greetings image : origami, digital art, white bac
 const IndexPage = () => (
   <Layout navLocation="home">
     <SEO title="Home | rohchakr" />
-    <StaticImage src={greetingsImage} alt={greetingsImageAltText} placeholder="blurred" loading="lazy"/>
+    <StaticImage src={greetingsImage} alt={greetingsImageAltText} placeholder="blurred" loading="lazy" />
     <h1>Hi,</h1>
     <p>Greetings from <span style={spanStyle}>Rohit Chakraborty</span>! So glad to see you here.</p>
     <p>This website is intended to share my <Link to="/career-timeline/" style={linkStyle}>professional journey</Link>, <Link to="/blog/" style={linkStyle}>technical notes</Link>, <Link to="/blog/" style={linkStyle}>lifestyle preferences</Link> and <Link to="/blog/" style={linkStyle}>general life experience</Link>. It also helps me getting more organized, perform experiments and improve my <i>Web Development</i>, <i>Automation</i>, <i>Product Strategy</i> and <i>Communication skills</i>.</p>

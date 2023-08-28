@@ -1,10 +1,12 @@
+.footerWrapper {
+    background-color: rgb(245, 235, 200)
+}
 .footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     padding: 20px;
     color: rgb(50, 25, 5);
-    background-color: rgb(245, 235, 200);
 }
 .footer section, .footer nav {
     margin: 1.2rem;

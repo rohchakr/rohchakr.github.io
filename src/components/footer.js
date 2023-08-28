@@ -63,11 +63,13 @@ const ContactArea = () => (
 )
 
 const Footer = () => (
-  <footer className={footerStyles.footer}>
-    <CopyRightArea />
-    <NavigationArea />
-    <ContactArea />
-  </footer>
+  <div className={footerStyles.footerWrapper}>
+    <footer className={footerStyles.footer}>
+      <CopyRightArea />
+      <NavigationArea />
+      <ContactArea />
+    </footer>
+  </div>
 )
 
 
