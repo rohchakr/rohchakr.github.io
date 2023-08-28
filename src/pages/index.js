@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -15,9 +16,13 @@ const linkStyle = {
   textDecoration: `none`
 }
 
+const greetingsImage = "../images/Greetings.jpeg"
+const greetingsImageAltText = "Greetings image : origami, digital art, white background, garden"
+
 const IndexPage = () => (
   <Layout navLocation="home">
     <SEO title="Home | rohchakr" />
+    <StaticImage src={greetingsImage} alt={greetingsImageAltText} />
     <h1>Hi,</h1>
     <p>Greetings from <span style={spanStyle}>Rohit Chakraborty</span>! So glad to see you here.</p>
     <p>This website is intended to share my <Link to="/career-timeline/" style={linkStyle}>professional journey</Link>, <Link to="/blog/" style={linkStyle}>technical notes</Link>, <Link to="/blog/" style={linkStyle}>lifestyle preferences</Link> and <Link to="/blog/" style={linkStyle}>general life experience</Link>. It also helps me getting more organized, perform experiments and improve my <i>Web Development</i>, <i>Automation</i>, <i>Product Strategy</i> and <i>Communication skills</i>.</p>
