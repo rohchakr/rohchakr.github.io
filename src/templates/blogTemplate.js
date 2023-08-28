@@ -24,7 +24,7 @@ export default function Template({
       <SEO title={title} />
       <div className={blogTemplateStyles.Container}>
         <div className={blogTemplateStyles.BlogPostFeaturedArea}>
-          <GatsbyImage image={featuredImage} alt={frontmatter.featuredImageAltText} />
+          <GatsbyImage image={featuredImage} alt={frontmatter.featuredImageAltText} placeholder="blurred" loading="lazy"/>
           <div className={blogTemplateStyles.BlogPostFeaturedAreaTextContainer}>
             <div className={blogTemplateStyles.BlogPostFeaturedAreaContentSeparator}>
             </div>
