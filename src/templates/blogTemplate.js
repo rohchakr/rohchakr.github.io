@@ -9,7 +9,7 @@ import Layout from "../components/layout"
 import OnThisPage from "../components/on-this-page"
 import Comments from "../components/comments"
 import { SEO } from "../components/seo"
-import * as blogTemplateStyles from "./blogTemplate.module.css"
+import * as blogTemplateStyles from "./blogTemplate.module.scss"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.

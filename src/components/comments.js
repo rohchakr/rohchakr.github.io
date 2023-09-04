@@ -1,6 +1,6 @@
 import React from "react"
 import Giscus from "@giscus/react"
-import * as commentsStyles from "./comments.module.css"
+import * as commentsStyles from "./comments.module.scss"
 
 export default function Comments() {
     return (

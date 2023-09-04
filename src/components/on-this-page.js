@@ -1,5 +1,5 @@
 import React from "react"
-import * as onThisPageStyles from "./on-this-page.module.css"
+import * as onThisPageStyles from "./on-this-page.module.scss"
 
 export default function OnThisPage({ toc }) {
     if (!toc) {

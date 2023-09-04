@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React, { useState } from "react"
 import { VscMenu, VscClose } from "react-icons/vsc"
 import RohChakrLogo from "./rohchakr-logo"
-import * as headerStyles from "./header.module.css"
+import * as headerStyles from "./header.module.scss"
 
 // wide and small is based on the size limits in header.module.css
 const screen = {
