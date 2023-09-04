@@ -1,8 +1,10 @@
+@use '../styles/colors.scss' as globalColors;
+
 .header {
     margin-bottom: 1.45rem;
     padding: 1rem;
-    background-color: rgb(50, 25, 5);
-    color: rgb(245, 235, 200);
+    background-color: globalColors.$brown-1;
+    color: globalColors.$brown-5;
 }
 
 .menuBarHorizontal {
@@ -22,9 +24,9 @@ li {
 .menuButton {
     margin: 0;
     display: flex;
-    background-color: rgb(50, 25, 5);
-    color: rgb(245, 235, 200);
-    border: 1px solid rgb(245, 235, 200);
+    background-color: globalColors.$brown-1;
+    color: globalColors.$brown-5;
+    border: 1px solid globalColors.$brown-5;
     border-radius: 0.2em;
     outline: none;
     cursor: pointer;
@@ -58,8 +60,8 @@ li {
 }
 
 .navItemFocus {
-    background-color: white;
-    color: rgb(50, 25, 5);
+    background-color: globalColors.$white;
+    color: globalColors.$brown-1;
 }
 
 /* Evaluate if needed seprately for 
@@ -75,8 +77,8 @@ li {
 .navItem>a>p:active,
 .menuButton:hover,
 .menuButton:active {
-    color: white;
-    background-color: rgb(90, 45, 10);
+    color: globalColors.$white;
+    background-color: globalColors.$brown-2;
 }
 
 .navContainer {

@@ -1,3 +1,15 @@
+@use '../styles/colors.scss' as globalColors;
+
 .ContentsContainer {
     padding: 0 1.0875rem 0 1.45rem;
+    color: globalColors.$blue-1;
+    a {
+        font-family: Roboto Mono, monospace;
+        color: globalColors.$blue-1;
+        text-decoration: none;
+
+        &:hover, &:active {
+            background-color: globalColors.$blue-5;
+        }
+    }
 }

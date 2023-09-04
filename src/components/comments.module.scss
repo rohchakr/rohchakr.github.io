@@ -1,5 +1,7 @@
+@use '../styles/colors.scss' as globalColors;
+
 .CommentsContainer {
-    border-top: 1px solid rgb(50, 25, 5);
+    border-top: 1px solid globalColors.$brown-1;
     padding-top: 2rem;
     margin-top: 2rem;
 }

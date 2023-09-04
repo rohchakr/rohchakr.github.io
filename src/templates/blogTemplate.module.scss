@@ -1,3 +1,5 @@
+@use '../styles/colors.scss' as globalColors;
+
 .Container {
     display: flex;
     width: 100%;
@@ -11,13 +13,13 @@
 }
 
 .BlogPostFeaturedAreaContentSeparator {
-    background-color: #fff;
+    background-color: globalColors.$white;
     height: 1rem;
 }
 
 .BlogPostFeaturedAreaTextContent {
     padding: 1em;
-    border: 1px solid rgb(50, 25, 5);
+    border: 1px solid globalColors.$brown-1;
 }
 
 @media only screen and (min-width: 720px) {
@@ -27,8 +29,8 @@
     }
 
     .BlogPostFeaturedAreaTextContent {
-        background-color: #fff;
+        background-color: globalColors.$white;
         opacity: 0.8;
-        border: 1px solid rgb(50, 25, 5);
+        border: 1px solid globalColors.$brown-1;
     }
 }

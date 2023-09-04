@@ -1,12 +1,14 @@
+@use '../styles/colors.scss' as globalColors;
+
 .footerWrapper {
-    background-color: rgb(245, 235, 200)
+    background-color: globalColors.$brown-5;
 }
 .footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     padding: 20px;
-    color: rgb(50, 25, 5);
+    color: globalColors.$brown-1;
 }
 .footer section, .footer nav {
     margin: 1.2rem;
@@ -14,7 +16,6 @@
 .footer h3 { 
     margin: 0;
     margin-bottom: 0.5rem;
-    color: rgb(100, 60, 40);
 }
 .footer ul {
     margin: 0;
