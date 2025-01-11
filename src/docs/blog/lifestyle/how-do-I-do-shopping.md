@@ -1,8 +1,8 @@
 ---
 date: "2023-09-16"
 title: "How do I make my shopping choices?"
-featuredImage: ShoppingPlanning1.jpeg
-featuredImageAltText: Shopping planning digital art, using more festive colors
+featuredImage: "ShoppingPlanning1.jpeg"
+featuredImageAltText: "Shopping planning digital art, using more festive colors"
 ---
 
 ## Introduction

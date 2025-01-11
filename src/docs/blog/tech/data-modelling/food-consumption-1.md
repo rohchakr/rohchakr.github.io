@@ -1,8 +1,8 @@
 ---
 date: "2023-08-05"
 title: "Data modelling : food consumption"
-featuredImage: DataModelling1.jpeg
-featuredImageAltText: A basic relational database management system schema with purple background
+featuredImage: "DataModelling1.jpeg"
+featuredImageAltText: "A basic relational database management system schema with purple background"
 ---
 
 ## Introduction

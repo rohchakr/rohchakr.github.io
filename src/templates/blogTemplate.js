@@ -20,7 +20,7 @@ export default function Template({
   const featuredImage = getImage(frontmatter.featuredImage?.childImageSharp?.gatsbyImageData)
 
   return (
-    <Layout navLocation="blog" rightSideContent={<OnThisPage toc={tableOfContents} />}>
+    <Layout navLocation="blog" rightSideContent={<OnThisPage toc={tableOfContents} blogTitle={title}/>}>
       <SEO title={title} />
       <div className={blogTemplateStyles.Container}>
         <div className={blogTemplateStyles.BlogPostFeaturedArea}>

@@ -1,0 +1,99 @@
+@use '../styles/colors.scss' as globalColors;
+
+.MonthBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: small;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.ProfessionalExperienceBlock, .PersonalExperienceBlock {
+    flex: 0 0 40%;
+}
+
+.MonthLabelBlock {
+    flex: 0 0 20%;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: relative;
+}
+
+.MonthLabelText {
+    text-align: center;
+    font-size: x-small;
+    border-radius: 50%;
+    background-color: globalColors.$blue-1;
+    color: globalColors.$white;
+}
+
+.MonthBlock ul {
+    margin: 0;
+    padding: 0;
+}
+
+.ProfessionalExperienceBlock ul {
+    border-left: 1px solid globalColors.$blue-1;
+    padding-left: 0.5rem;
+}
+
+.PersonalExperienceBlock ul {
+    border-right: 1px solid globalColors.$blue-1;
+    padding-right: 0.5rem;
+}
+
+.MonthBlock li {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    line-height: normal;
+}
+
+.ProfessionalExperienceBlock li {
+    text-align: left;
+}
+
+.PersonalExperienceBlock li {
+    text-align: right;
+}
+
+.Line, .LineFirst, .LineLast {
+    height: 100%;
+    position: absolute;
+    width: 1px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: globalColors.$blue-1;
+    z-index: -1;
+}
+
+.LineFirst {
+    top: 50%;
+}
+
+.LineLast {
+    bottom: 50%;
+}
+
+.LeftLine, .RightLine {
+    height: 1px;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    background-color: globalColors.$blue-1;
+    z-index: -1;
+}
+
+.LeftLine {
+    left: 0;
+}
+
+.RightLine {
+    right: 0;
+}
+
+.Award {
+    font-weight: bold;
+}
