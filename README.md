@@ -12,3 +12,12 @@ Check for outdated dependencies
 ```shell
 npm outdated
 ```
+
+Run
+```
+npm run start
+```
+
+To post a new blog:
+1. src > docs > blog
+
