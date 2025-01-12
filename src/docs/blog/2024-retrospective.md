@@ -1,8 +1,10 @@
 ---
 date: "2025-01-11"
 title: "2024: A Year of Growth"
+description: "A reflection on a year of significant milestones and transformative experiences"
 featuredImage: "2024_Retro.jpeg"
 featuredImageAltText: "An image containing collage of various images throughout the year"
+socialImage: "/2024_Retro_Social.jpg"
 ---
 
 ## My Professional Journey

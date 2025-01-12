@@ -1,4 +1,5 @@
 import React from "react"
+
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
@@ -25,7 +26,6 @@ const BlogIndexPage = ({
 
   return (
     <Layout navLocation="blog">
-      <SEO title="Blog | rohchakr" />
       <div>{Posts}</div>
     </Layout>
   )
@@ -33,6 +33,7 @@ const BlogIndexPage = ({
 
 export default BlogIndexPage
 
+export const Head = () => <SEO title="Blog | rohchakr" />
 
 export const pageQuery = graphql`
   query {

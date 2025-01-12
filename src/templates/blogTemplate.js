@@ -20,11 +20,10 @@ export default function Template({
   const featuredImage = getImage(frontmatter.featuredImage?.childImageSharp?.gatsbyImageData)
 
   return (
-    <Layout navLocation="blog" rightSideContent={<OnThisPage toc={tableOfContents} blogTitle={title}/>}>
-      <SEO title={title} />
+    <Layout navLocation="blog" rightSideContent={<OnThisPage toc={tableOfContents} blogTitle={title} />}>
       <div className={blogTemplateStyles.Container}>
         <div className={blogTemplateStyles.BlogPostFeaturedArea}>
-          <GatsbyImage image={featuredImage} alt={frontmatter.featuredImageAltText} placeholder="blurred" loading="lazy"/>
+          <GatsbyImage image={featuredImage} alt={frontmatter.featuredImageAltText} placeholder="blurred" loading="lazy" />
           <div className={blogTemplateStyles.BlogPostFeaturedAreaTextContainer}>
             <div className={blogTemplateStyles.BlogPostFeaturedAreaContentSeparator}>
             </div>
@@ -54,6 +53,19 @@ export default function Template({
   )
 }
 
+export const Head = ({ data, location }) => {
+  const { markdownRemark } = data
+  const title = `${markdownRemark.frontmatter.title} | rohchakr`
+  const description = markdownRemark.frontmatter.description
+  const socialImage = markdownRemark.frontmatter.socialImage
+  return <SEO
+    title={title}
+    pathname={location.pathname}
+    description={description}
+    image={socialImage}
+  />
+}
+
 export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -61,12 +73,14 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        description
         featuredImageAltText
         featuredImage {
           childImageSharp {
             gatsbyImageData(width: 800)
           }
         }
+        socialImage
       }
       tableOfContents
     }
